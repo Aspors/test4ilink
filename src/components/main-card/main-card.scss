@@ -1,0 +1,146 @@
+.main-card{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
+    .main-card__image{
+        width: 519px;
+        height: 383px;
+        border-radius: 2px;
+        margin-top: 32px;
+        background: url('../../static/img/photo.jpg') top (center/cover) no-repeat;
+        @media screen and (max-width: 425px) {
+            margin-top: 64px;
+            margin-right: -16px;
+            margin-bottom: -14px;
+            height: 304px;
+        }
+    }
+    .main-card__bio{
+        box-sizing: border-box;
+        background-color: #fff;
+        width: 761px;
+        max-height: 383px;
+        padding: 40px;
+        border-radius: 2px;
+        @media screen and (max-width: 1024px) {
+            max-height: 100%;
+            padding: 16px;
+        }
+        @media screen and (max-width: 425px) {
+            h2{
+                font-size: 24px;
+                line-height: 32px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .main-card__info{
+                flex-direction: column;
+            }
+        }
+        h2{
+            margin: 0;
+            font-family: 'Factor A';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 32px;
+            color: #585CC6;
+        }
+        p{
+            margin: 0;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 0.01em;
+            color: #333333;
+            &#gender{
+                position: relative;
+                &::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    right: -24px;
+                    height: 20px;
+                    width: 20px;
+                    background: url('../../static/img/icons/Male.svg') center (center/cover) no-repeat;
+                }
+            }
+
+        }
+        span{
+            font-weight: bold;
+        }
+
+        .main-card__info{
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            span{
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0.01em;
+                color: #8A8A8A;
+            }
+        }
+
+        .main-card__data{
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            margin-bottom: 18px;
+            @media screen and(max-width: 425px) {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 16px;
+            }
+            p{
+                margin-left: 40px;
+                &:first-child{
+                    margin-left: 0px;
+                }
+                &:last-child{
+                    margin-left: 50px;
+                    margin-top: 12px;
+                }
+                @media screen and (max-width: 425px) {
+                margin-left: 40px;
+                &:last-child{
+                    margin-left: 0;
+                }
+                }
+                @media screen and (max-width: 375px) {
+                    margin-left: 15px;                       
+                }
+            }
+            }
+        }
+        
+        p#pet{
+            margin-top: 32px;
+            margin-left: 32px;
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                left: -44px;
+                top: -3px;
+                background: url('../../static/img/icons/pet.svg') center (center/cover) no-repeat;
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }

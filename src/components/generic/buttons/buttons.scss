@@ -1,0 +1,77 @@
+@keyframes button-animation{
+    from{
+        width: 0;
+        animation-timing-function: ease-in;
+    }
+    60%{
+        width: 100%;
+        background: #797DDF;
+    }
+    to{
+        width: 100%;
+        background: #8A8A8A;
+    }
+}
+
+button {
+    position: relative;
+    cursor: pointer;
+    width: 227px;
+    height: 52px;
+    border: none;
+    outline: none;
+    background: #585CC6;
+    border-radius: 2px;
+    &::before{
+        content: '';
+        position: absolute;
+        border-radius: 2px;
+        top: 0;
+        left: 0;
+        width: 0;
+        z-index: 0;
+        background: #797DDF;
+        height: 100%;
+    }
+
+    &:focus{
+        &:before{
+            animation: button-animation 0.4s forwards;
+        }}
+
+    span{
+        position: relative;
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+    }
+    &.plus{
+        span{
+            margin-left: 12px;
+            &::before{
+                content: '';
+                position: absolute;
+                display: block;
+                top: 11px;
+                left: -22px;
+                width: 14px;
+                height: 2px;
+                background: #fff;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                display: block;
+                top: 5px;
+                left: -16px;
+                width: 2px;
+                height: 14px;
+                background: #fff;
+                }
+        }
+    }
+}
+

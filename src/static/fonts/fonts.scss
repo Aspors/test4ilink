@@ -1,0 +1,83 @@
+@font-face{
+    font-family: 'Gilroy';
+    src: url('./Gilroy/Gilroy-Bold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+    url('./Gilroy/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./Gilroy/Gilroy-Bold.woff2') format('woff2'),
+    url('./Gilroy/Gilroy-Bold.woff') format('woff'),
+    url('./Gilroy/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./Gilroy/Gilroy-Semibold.eot');
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+    url('./Gilroy/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('./Gilroy/Gilroy-Semibold.woff2') format('woff2'),
+    url('./Gilroy/Gilroy-Semibold.woff') format('woff'),
+    url('./Gilroy/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./Gilroy/Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+    url('./Gilroy/Gilroy-Medium.eot?#iefix') format('embedded-opentype'), 
+    url('./Gilroy/Gilroy-Medium.woff2') format('woff2'),
+    url('./Gilroy/Gilroy-Medium.woff') format('woff'),
+    url('./Gilroy/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Factor A';
+    src: url('./FactorA/FactorALight-Regular.eot');
+    src: local('Factor A Light Regular'), local('FactorALight-Regular'),
+    url('./FactorA/FactorALight-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./FactorA/FactorALight-Regular.woff2') format('woff2'),
+    url('./FactorA/FactorALight-Regular.woff') format('woff'),
+    url('./FactorA/FactorALight-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Factor A';
+    src: url('./FactorA/FactorA-Regular.eot');
+    src: local('Factor A Regular'), local('FactorA-Regular'),
+    url('./FactorA/FactorA-Regular.eot?#iefix') format('embedded-opentype'), 
+    url('./FactorA/FactorA-Regular.woff2') format('woff2'),
+    url('./FactorA/FactorA-Regular.woff') format('woff'),
+    url('./FactorA/FactorA-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Factor A';
+    src: url('./FactorA/FactorAMedium-Regular.eot');
+    src: local('Factor A Medium Regular'), local('FactorAMedium-Regular'),
+     url('./FactorA/FactorAMedium-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./FactorA/FactorAMedium-Regular.woff2') format('woff2'),
+    url('./FactorA/FactorAMedium-Regular.woff') format('woff'),
+    url('./FactorA/FactorAMedium-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Factor A';
+    src: url('./FactorA/FactorA-Bold.eot');
+    src: local('Factor A Bold'), local('FactorA-Bold'),
+    url('./FactorA/FactorA-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./FactorA/FactorA-Bold.woff2') format('woff2'),
+    url('./FactorA/FactorA-Bold.woff') format('woff'),
+    url('./FactorA/FactorA-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

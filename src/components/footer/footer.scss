@@ -1,0 +1,59 @@
+footer{
+    .container{
+        padding: 20px 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: 425px) {
+            padding: 16px;
+            flex-direction: column;
+        }
+        span{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #8A8A8A;
+            @media screen and (max-width: 425px) {
+                font-size: 12px;
+                line-height: 20px;
+                color: #333333;
+            }
+        }
+        .social{
+            display: flex;
+            @media screen and (max-width: 425px) {
+                margin-top: 12px;
+            }
+            div{
+                cursor: pointer;
+                height: 24px;
+                width: 24px;
+            }
+            .vk{
+                background: url('../../static/img/icons/vk.svg') center (center/cover) no-repeat;
+                &:hover{
+                    opacity: .8;
+                }
+            }
+            .reddit{
+                background: url('../../static/img/icons/Reddit.svg') center (center/cover) no-repeat;
+                margin-left: 16px;
+                &:hover{
+                    background-image: url('../../static/img/icons/Reddit_hover.svg');
+                }
+            }
+            .telegram{
+                background: url('../../static/img/icons/Telegram.svg') center (center/cover) no-repeat;
+                margin-left: 16px;
+                &:hover{
+                    background-image: url('../../static/img/icons/Telegram_hover.svg');
+                }
+            }
+            .a{
+                text-decoration: none;
+            }
+        }
+    }
+}
