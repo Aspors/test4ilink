@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 const Modal = () => {
 
+    // TODO про бульку я ужек писал 
     const  [hide, setHide] = useState('modal hide');
     const modalClose = () => {
         setHide('modal hide');

@@ -1,6 +1,8 @@
 import './main-card.scss';
 
 
+// TODO компоненты и файлы к ним именуются в PascalCase 
+
 const Maincard = () =>{
     return (
         <div className="main-card">
@@ -19,6 +21,7 @@ const Maincard = () =>{
                     <p id="gender"><span>Пол:</span>  мужчина</p>
                     <p><span>Возраст:</span> 20</p>
                 </div>
+                {/* TODO слишком длиная строка. поставь себе еslint и притиер */}
                     <p><span>О себе:</span> Насколько же в моем стиле пропустить набор:) Я не самый умный ребенок в семье, но чтобы настолько... <br /> <br /> <i>бтв тоже есть милый кот</i></p> 
                     <p id="pet"><span>Домашнее животное:</span> есть</p>
             </div>

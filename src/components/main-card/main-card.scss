@@ -14,7 +14,7 @@
         background: url('../../static/img/photo.jpg') top (center/cover) no-repeat;
         @media screen and (max-width: 425px) {
             margin-top: 64px;
-            margin-right: -16px;
+            margin-right: -16px; // TODO отрицательный марджин - как правило, костыль. Лучше избегать
             margin-bottom: -14px;
             height: 304px;
         }

@@ -24,7 +24,7 @@ main{
                 
             }
             @media screen and (max-width: 425px) {
-                font-size: 48px;
+                font-size: 48px; // TODO чтобы не переопределять размер, можно задавать его в относительных единицах
                 line-height: 54px;
                 margin-bottom: 0;
             }

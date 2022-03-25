@@ -15,10 +15,22 @@ header{
             padding: 16px;
         }
     }
+
+/*
+    TODO 
+    если ты используешь БЭМ, то классы именуются, как block__element_modificator, у тебя не так 
+    используя sass, не обящззательно писать имена полностью, ты же используешь вложение 
+    .profile {
+        &__wrapper {}
+        &__photo {}
+    }
+
+*/
+
     .profile_wrapper{
         display: flex;
         align-items: center;
-        .profile_photo{
+        .profile_photo{   
             display: inline-block;
             border-radius: 2px;
             height: 52px;
@@ -36,11 +48,11 @@ header{
     .name{
         display: inline-block;
         margin-left: 20px;
-        font-family: 'Gilroy';
+        font-family: 'Gilroy'; // TODO опять шрифт
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
-        color: #333333;
+        color: #333333; // TODO цвета лучше выносить в переменные 
         @media screen and (max-width: 768px) {
             overflow: hidden;
             max-width: 70px;

@@ -9,7 +9,7 @@ footer{
             flex-direction: column;
         }
         span{
-            font-family: 'Gilroy';
+            font-family: 'Gilroy'; // TODO такие вещи должны быть 8глобальными на весь проект, не надо писать в каждом компоненте шрифт
             font-style: normal;
             font-weight: 500;
             font-size: 16px;
@@ -48,6 +48,7 @@ footer{
                 background: url('../../static/img/icons/Telegram.svg') center (center/cover) no-repeat;
                 margin-left: 16px;
                 &:hover{
+                    // TODO У тебя картинка просто бледнее становится, это можно сделать фильтром или opacity, зачем тянуть вторую такую же картинку? 
                     background-image: url('../../static/img/icons/Telegram_hover.svg');
                 }
             }
