@@ -1,26 +1,19 @@
-import './modal.scss';
-import '../generic/buttons/buttons';
-import Form from '../form/form';
-import { useState } from 'react';
+import "./modal.scss";
+import "../generic/buttons/buttons";
+import Form from "../form/form";
 
-
-const Modal = () => {
-
-    const  [hide, setHide] = useState('modal hide');
-    const modalClose = () => {
-        setHide('modal hide');
-    }
-
-
-    return(
-        <div className={hide}>
-            <div className="modal__dialog">
-                <div className="modal__content">
-                    <Form modalClose = {modalClose}></Form>
-                </div>
-            </div>
+const Modal = ({ modal, setModal }) => {
+  return (
+    <div
+      className={modal ? "modal" : "modal hide"}
+      onClick={() => setModal(false)}>
+      <div className="modal__dialog">
+        <div className="modal__content" onClick={(e) => e.stopPropagation()}>
+          <Form setModal={setModal} modal={modal}></Form>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Modal;

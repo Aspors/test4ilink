@@ -1,12 +1,12 @@
-.plus{
-    &::before{
-        width: 14px;
-        height: 2px;
-        background: #fff;
-    }
-    &::after{
-        width: 2px;
-        height: 14px;
-        background: #fff;
-    }
+.plus {
+  &::before {
+    width: 14px;
+    height: 2px;
+    background: #fff;
+  }
+  &::after {
+    width: 2px;
+    height: 14px;
+    background: #fff;
+  }
 }

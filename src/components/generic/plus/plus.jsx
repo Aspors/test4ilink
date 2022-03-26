@@ -1,5 +1,7 @@
-import './plus.scss';
+import "./plus.scss";
 
-const plus = ({inner}) =>{(<span className="plus">{inner}</span>)}
+const plus = ({ inner }) => {
+  <span className="plus">{inner}</span>;
+};
 
-export default plus; 
+export default plus;
