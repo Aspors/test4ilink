@@ -7,7 +7,6 @@ import { useState } from "react";
 
 const Main = () => {
   const [modal, setModal] = useState(false);
-  console.log(`main:${modal}`);
   return (
     <main>
       <div className="container">

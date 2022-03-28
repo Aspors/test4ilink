@@ -9,10 +9,16 @@
   &__dialog {
     max-width: 676px;
     min-height: 511px;
-    margin: 30vh auto;
+    margin: 15vh auto;
     @media screen and(max-width: 768px) {
       max-width: 288px;
       min-height: 538px;
+    }
+    @media screen and (max-width: 425px) {
+      margin: 7vh 10vw;
+    }
+    @media screen and (max-width: 375px) {
+      margin: 7vh 0vw;
     }
     .modal__content {
       position: relative;

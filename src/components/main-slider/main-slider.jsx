@@ -5,8 +5,6 @@ import { SliderItem, sliderItemsNum } from "./slider-items";
 
 const Slider = ({ modal, setModal }) => {
   const [posSlider, setPos] = useState(0);
-  const [nextActive, setActive] = useState("slider__btn");
-  const [prevActive, setPrevActive] = useState("slider__btn  inactive");
   const sliderWindowWidth = useRef(0);
   const numberOfNav =
     window.innerWidth <= 768 ? sliderItemsNum : sliderItemsNum / 2;
@@ -16,8 +14,6 @@ const Slider = ({ modal, setModal }) => {
       setPos(-sliderWindowWidth.current.clientWidth - 24);
     } else {
       setPos(posSlider - sliderWindowWidth.current.clientWidth - 24);
-      setActive("slider__btn  inactive");
-      setPrevActive("slider__btn");
     }
   }
 
@@ -26,8 +22,6 @@ const Slider = ({ modal, setModal }) => {
       setPos(0);
     } else {
       setPos(posSlider + sliderWindowWidth.current.clientWidth + 24);
-      setPrevActive("slider__btn  inactive");
-      setActive("slider__btn");
     }
   }
 
@@ -70,10 +64,23 @@ const Slider = ({ modal, setModal }) => {
       </div>
       <div className="slider__buttons">
         <div className="pillow">
-          <div className={prevActive} onClick={prevSlide} id="prev" />
+          <div
+            className={posSlider === 0 ? "slider__btn inactive" : "slider__btn"}
+            onClick={prevSlide}
+            id="prev"
+          />
         </div>
         <div className="pillow">
-          <div className={nextActive} id="next" onClick={nextSlide} />
+          <div
+            className={
+              posSlider ===
+              (numberOfNav - 1) * (-sliderWindowWidth.current.clientWidth - 24)
+                ? "slider__btn inactive"
+                : "slider__btn"
+            }
+            id="next"
+            onClick={nextSlide}
+          />
         </div>
       </div>
     </div>
