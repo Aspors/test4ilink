@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test4ilink/static/css/main.8bd881d1.css",
-    "main.js": "/test4ilink/static/js/main.9b690099.js",
+    "main.js": "/test4ilink/static/js/main.6f10cc86.js",
     "static/media/photo.jpg": "/test4ilink/static/media/photo.0a641a356efafb350a3f.jpg",
     "static/media/yanenavizhuetotfon.jpg": "/test4ilink/static/media/yanenavizhuetotfon.b849b3e86725dfc24cd6.jpg",
     "static/media/Gilroy-Medium.eot": "/test4ilink/static/media/Gilroy-Medium.2fea647f59b209f411b1.eot",
@@ -48,10 +48,10 @@
     "static/media/Arrow.svg": "/test4ilink/static/media/Arrow.4da4186523de400f9414.svg",
     "static/media/Arrow_hover.svg": "/test4ilink/static/media/Arrow_hover.c19877bb21b06fac4a08.svg",
     "main.8bd881d1.css.map": "/test4ilink/static/css/main.8bd881d1.css.map",
-    "main.9b690099.js.map": "/test4ilink/static/js/main.9b690099.js.map"
+    "main.6f10cc86.js.map": "/test4ilink/static/js/main.6f10cc86.js.map"
   },
   "entrypoints": [
     "static/css/main.8bd881d1.css",
-    "static/js/main.9b690099.js"
+    "static/js/main.6f10cc86.js"
   ]
 }
