@@ -63,9 +63,11 @@
   .slider__window_wrapper {
     width: 100%;
     overflow: hidden;
+    pointer-events: none;
     .slider__window {
       position: relative;
       display: flex;
+      pointer-events: none;
       justify-content: space-between;
       flex-wrap: nowrap;
       width: 202.26%;
@@ -80,6 +82,7 @@
       .slider__item {
         box-sizing: border-box;
         width: 50%;
+        pointer-events: all;
         padding: 24px;
         background: #f5f5f5;
         border-radius: 2px;

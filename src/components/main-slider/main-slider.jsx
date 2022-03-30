@@ -5,15 +5,24 @@ import { SliderItem, sliderItemsNum } from "./slider-items";
 
 const Slider = ({ modal, setModal }) => {
   const [posSlider, setPos] = useState(0);
+  const [touchTranslate, setTouchTranslate] = useState(0);
   const sliderWindowWidth = useRef(0);
-  const numberOfNav =
-    window.innerWidth <= 768 ? sliderItemsNum : sliderItemsNum / 2;
+  const [numberOfNav] = useState(
+    window.innerWidth <= 768 ? sliderItemsNum : sliderItemsNum / 2
+  );
+  const [start, setStart] = useState(0);
 
   function nextSlide() {
-    if (posSlider === -sliderWindowWidth.current.clientWidth - 24) {
-      setPos(-sliderWindowWidth.current.clientWidth - 24);
+    if (
+      Math.abs(posSlider - sliderWindowWidth.current.clientWidth) >
+      Math.abs(sliderWindowWidth.current.clientWidth * numberOfNav)
+    ) {
     } else {
-      setPos(posSlider - sliderWindowWidth.current.clientWidth - 24);
+      if (posSlider !== 0) {
+        setPos(posSlider - sliderWindowWidth.current.clientWidth);
+      } else {
+        setPos(-sliderWindowWidth.current.clientWidth - 24);
+      }
     }
   }
 
@@ -21,7 +30,33 @@ const Slider = ({ modal, setModal }) => {
     if (posSlider === 0) {
       setPos(0);
     } else {
-      setPos(posSlider + sliderWindowWidth.current.clientWidth + 24);
+      if (
+        Math.abs(posSlider + sliderWindowWidth.current.clientWidth + 24) === 0
+      ) {
+        setPos(posSlider + sliderWindowWidth.current.clientWidth + 24);
+      } else {
+        setPos(posSlider + sliderWindowWidth.current.clientWidth);
+      }
+    }
+  }
+
+  function handleTouchStart(e) {
+    setStart(e.touches[0].clientX);
+  }
+
+  function handleTouchMove(e) {
+    setTouchTranslate(-(start - e.touches[0].clientX));
+  }
+  function handleTouchCancel() {
+    if (-200 > touchTranslate) {
+      setTouchTranslate(0);
+      nextSlide();
+    }
+    if (200 < touchTranslate) {
+      setTouchTranslate(0);
+      prevSlide();
+    } else {
+      setTouchTranslate(0);
     }
   }
 
@@ -33,10 +68,17 @@ const Slider = ({ modal, setModal }) => {
         onClick={() => setTimeout(() => setModal(true), 350)}>
         <span>Добавить отзыв</span>
       </button>
-      <div ref={sliderWindowWidth} className="slider__window_wrapper">
+      <div
+        ref={sliderWindowWidth}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchCancel}
+        onTouchMove={handleTouchMove}
+        className="slider__window_wrapper">
         <div
           className="slider__window"
-          style={{ transform: "translateX(" + posSlider + "px)" }}>
+          style={{
+            transform: `translateX(${posSlider + touchTranslate}px)`,
+          }}>
           <SliderItem></SliderItem>
         </div>
       </div>
